@@ -1,4 +1,4 @@
-### Transactional Templates
+## Transactional Templates
 
 SendGrid transactional templates let you leverage power of [handlebars](https://handlebarsjs.com/)
 syntax to easily manage complex dynamic content in transactional emails.
@@ -7,19 +7,23 @@ For this example, we assume you have created a [transactional template](https://
 
 This example also assumes you [set your environment variable](https://github.com/sendgrid/sendgrid-python/blob/master/TROUBLESHOOTING.md#environment-variables-and-your-sendgrid-api-key) with your SendGrid API Key.
 
-Template ID (replace with your own):
+### Template ID (replace with your own):
 
 ```text
 d-13b8f94fbcae4ec6b75270d6cb59f932
 ```
 
-Email Subject:
+### Email Subject:
 
 ```text
 {{ subject }}
 ```
+__Note__: if you include the characters `'`, `"` or `&` in a subject line replacement be sure to use three brackets like below
+```text
+{{{ subject }}}
+```
 
-Template Body:
+### Template Body:
 
 ```html
 <html>
